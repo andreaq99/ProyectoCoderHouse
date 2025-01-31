@@ -1,20 +1,32 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from 'react-native'
+import { colors } from './src/globals/colors'
+import { useFonts } from 'expo-font'
+import { fonts } from './src/globals/fonts'
+import Navigator from './src/navigation/Navigator'
+import { Provider } from 'react-redux'
+import {store} from './src/store'
+import { useEffect } from 'react'
+//import dotenv from 'dotenv'
+
 
 export default function App() {
+
+
+  //dotenv.config()
+  const [fontsLoaded] = useFonts(fonts)
+
+  if(!fontsLoaded){
+    return null
+  }
+
   return (
-    <View style={styles.container}>
-      <Text>ola!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    <>
+      <Provider store={store}>
+        <Navigator/>
+      </Provider>
+    
+      <StatusBar style="light" backgroundColor={colors.accent}/>
+    </>
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'pink',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

@@ -1,12 +1,12 @@
 {
   "expo": {
-    "name": "my-app",
-    "slug": "my-app",
+    "name": "ecommerce",
+    "slug": "ecommerce",
     "version": "1.0.0",
-    "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
+    "orientation": "portrait",
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
@@ -19,10 +19,19 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.maxirosanda.ecommerce"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-sqlite"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "5a4762cd-9ca6-4df3-9fb3-4cc32b7f8220"
+      }
     }
   }
 }
