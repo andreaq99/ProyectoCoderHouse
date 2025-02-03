@@ -9,6 +9,7 @@ import { useDispatch } from 'react-redux'
 import { setUser } from '../features/userSlice'
 import { loginSchema } from '../validations/loginSchema'
 import { deleteSesion, insertSession } from '../config/dbSqlite'
+import { Button } from 'react-native-web'
 
 
 const Login = () => {
@@ -70,9 +71,9 @@ const Login = () => {
             error={passwordError}
           />
           <SubmitButton onPress={onSubmit} title="Ingresar"/>
-          <Text style={styles.sub}>No tienen una cuenta?</Text>
+          <Text style={styles.sub}>No tienes una cuenta?</Text>
           <Pressable onPress={()=> navigation.navigate("Signup")} >
-              <Text style={styles.subLink}>Reghistrarme</Text>
+              <Text style={styles.subLink}>Registrarme</Text>
           </Pressable>
       </View>
     </View>
@@ -101,16 +102,16 @@ const styles = StyleSheet.create({
     title:{
       fontSize:22,
       fontFamily:"Lobster",
-      color:colors.lightGray
+      color:colors.black
     },
     sub:{
         fontSize:14,
         fontFamily:"Josefin",
-        color:colors.lightGray
+        color:colors.black
     },
     subLink:{
         fontSize:14,
         fontFamily:"Josefin",
-        color:colors.lightGray
-    }
+        color:colors.black
+    },
 })

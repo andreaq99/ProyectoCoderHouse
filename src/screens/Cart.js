@@ -46,7 +46,7 @@ const Cart = () => {
         renderItem={({item}) => <CardCartProduct product = {item}/>}
       />
       <View style={styles.containerTotal}>
-        <Text style={styles.text}>Total: {total} $ ARG </Text>
+        <Text style={styles.text}>Total: {total} $ USD </Text>
         <Pressable style={styles.button} onPress={confirmCart}>
             <Text style={styles.buttonText}>Finalizar Compra</Text>
         </Pressable>

@@ -6,7 +6,7 @@ import { colors } from '../globals/colors'
 const TabBarIcon = ({text,icon}) => {
   return (
     <View style={styles.container}>
-      <Entypo name={icon} size={28} color={colors.lightGray}/>
+      <Entypo name={icon} size={28} color={colors.black}/>
       <Text style={styles.text}>{text}</Text>
     </View>
   )
@@ -21,6 +21,6 @@ const styles = StyleSheet.create({
         gap:5
     },
     text:{
-        color:colors.lightGray
+        color:"black"
     }
 })

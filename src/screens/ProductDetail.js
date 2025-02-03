@@ -45,7 +45,7 @@ const ProductDetail = ({route}) => {
       <Image source={{uri:product.thumbnail}} style={styles.image} resizeMode='contain'/>
       <Text style={styles.title}>{product.title}</Text>
       <Text style={styles.description}>{product.description}</Text>
-      <Text style={styles.price}>Precio: {product.price} $ ARG</Text>
+      <Text style={styles.price}>Precio: {product.price} $ USD</Text>
       {
         (product.stock - productCart?.quantity) === 0 ? 
           <Text style={styles.price}>Producto sin stock</Text> 
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
   image:{
     width:"100%",
     height:200,
-    backgroundColor:"red"
+    backgroundColor:"white"
   },
   title:{
     fontSize:16,
@@ -93,10 +93,11 @@ const styles = StyleSheet.create({
     marginHorizontal:10,
     padding:10,
     alignItems:"center",
-    borderRadius:6
+    borderRadius:5,
+    borderColor:"black"
   },
   textButton:{
     fontSize:20,
-    color:colors.lightGray
+    color:"black"
   }
 })

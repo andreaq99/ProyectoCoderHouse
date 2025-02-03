@@ -34,6 +34,6 @@ const styles = StyleSheet.create({
         borderRadius:7
     },
     text:{
-        color:colors.lightGray
+        color:colors.black
     }
 })

@@ -4,7 +4,7 @@ import { colors } from '../globals/colors'
 const LoadingSpinner = () => {
   return (
     <View style={styles.container}>
-      <ActivityIndicator size={80} color="white"/>
+      <ActivityIndicator size={80} color="black"/>
     </View>
   )
 }
@@ -19,7 +19,8 @@ const styles = StyleSheet.create({
         justifyContent:"center",
         alignItems:"center",
         backgroundColor:colors.accent,
-        position:"absolute",
-        zIndex:1000,
+        position:"relative",
+        top: 200,
+        left: 0,
     }
 })

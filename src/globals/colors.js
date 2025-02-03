@@ -1,5 +1,7 @@
 export const colors = {
-    primary:"#3226E0",
-    accent:"#6F26E0",
-    lightGray:"#EDF1D6"
+    primary:"pink",
+    accent:"pink",
+    lightGray:"#EDF1D6",
+    gold:"#bf9b5f",
+    black:"black"
 }

@@ -1,21 +1,17 @@
 # E-Commerce App - React Native
 
-Una aplicación de comercio electrónico desarrollada con React Native que ofrece una experiencia de compra completa y fácil de usar.
+Este es un proyecto para la platafroma CoderHouse, para el curso de Desarrollo de Aplicaciones, es una aplicación de comercio electrónico desarrollada con React Native que ofrece la experiencia de un flujo de compra completa y fácil de usar.
 
-## Funcionalidades Principales
+## Flujo Ecommerce
 
-### Pantalla de Cuenta
+### Pantalla principal de cuenta
 
-- **Acceso seguro:** Solo los usuarios autenticados pueden acceder a la pantalla de perfil y realizar compras.
-- **Información del usuario:** Muestra detalles del usuario, como nombre y dirección.
+- **Accediendo a la aplicacion:** Solo los usuarios registrados pueden acceder a la aplicacion ver los productos y realizar compras.
+- **Perfil del usuario:** Muestra detalles del usuario, como foto y dirección.
 
-<img src="./screenshot/Screenshot_1737498571.png" width="300" >
-<img src="./screenshot/Screenshot_1737498674.png" width="300" >
+### Al entrar en la aplicacion 
 
-### Autenticación con Firebase
-
-- Utiliza el sistema de autenticación de Firebase para gestionar el acceso de usuarios.
-- Permite a los usuarios iniciar sesión y registrarse de manera segura.
+- El usuario ingresa a la aplicacion y se despliega un listado de los productos, de los cuales puede acceder al detalle de cada producto y realizar una compra. A través del nav menú , puede seleccionar la categoría de interés, y navegar por el carrito, las ordendes realizadas, como tambien acceder a los detalles del perfil.
 
 ### Pantalla de Categorías
 
@@ -30,69 +26,21 @@ Una aplicación de comercio electrónico desarrollada con React Native que ofrec
 
 ### Pantalla de Detalles del Producto
 
+  Al hacer click en un Item, se redireccionara a los detalles de dicho item, donde podras ver mas información del mismo, ademas de poder comprar la cantidad deseada de dicho producto.
 - Proporciona una descripción detallada del producto.
 - Muestra el precio y el stock disponible.
 - Permite agregar el producto al carrito.
-
-<img src="./screenshot/Screenshot_1705910438.png" width="300" >
-<img src="./screenshot/Screenshot_1705910442.png" width="300" >
-<img src="./screenshot/Screenshot_1705910445.png" width="300" >
-
-### Navegación Inferior
-
-
-```javascript
-        const TabNavigator = () => {
-  return (
-        <Tab.Navigator
-          screenOptions={{
-            headerShown:false,
-            tabBarShowLabel:false,
-            tabBarStyle: styles.tabBar
-
-          }}
-        >
-          <Tab.Screen
-             name="ShopStack"
-             component={ShopStack}
-             options={{
-              tabBarIcon:({focused}) => <TabIcon icon="shop" label="Productos" focused={focused}/>
-             }}
-          />
-          <Tab.Screen 
-              name="CartStack" 
-              component={CartStack}
-              options={{
-                tabBarIcon:({focused}) =>  <TabIcon icon="shopping-cart" label="Carrito" focused={focused}/> 
-              }}
-             />
-             <Tab.Screen 
-              name="OrdersStack" 
-              component={OrdersStack}
-              options={{
-                tabBarIcon:({focused}) => <TabIcon icon="list" label="Ordenes" focused={focused}/> 
-              }}
-             />
-            <Tab.Screen 
-              name="ProfileStack" 
-              component={ProfileStack}
-              options={{
-                tabBarIcon:({focused}) => <TabIcon icon="user" label="Perfil" focused={focused}/> 
-              }}
-             />
-      </Tab.Navigator>
-  )
-}
-
-```
 
 - **Pestaña 1 - Productos:** Categorías y productos (stack principal).
 - **Pestaña 2 - Carrito:** Detalles del carrito de compras con resumen y botón para finalizar la orden.
 - **Pestaña 3 - Órdenes:** Historial de órdenes realizadas.
 - **Pestaña 4 - Perfil:** Información del usuario, ubicación y carga de imagen de perfil.
 
-<img src="./screenshot/Screenshot_1705910459.png" width="300" >
-<img src="./screenshot/Screenshot_1705910463.png" width="300" >
+### Autenticación con Firebase
+
+- Utiliza el sistema de autenticación de Firebase para gestionar el acceso de usuarios.
+- Permite a los usuarios iniciar sesión y registrarse de manera segura.
+
 
 ## Tecnologías Utilizadas
 
@@ -111,7 +59,3 @@ Una aplicación de comercio electrónico desarrollada con React Native que ofrec
 3. Configura las claves de API para servicios externos (Expo-Location, Firebase, etc.).
 4. Configura las credenciales de Firebase en tu proyecto.
 5. Ejecuta la aplicación: `npm start`
-
-## Contacto
-
-Para preguntas o soporte, contacta a maxi_rosanda@hotmail.com.

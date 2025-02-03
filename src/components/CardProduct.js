@@ -15,7 +15,7 @@ const CardProduct = ({product}) => {
       <View>
         <Text style={styles.title}>{title}</Text>
         <View style={styles.containerText}>
-            <Text style={width > 400 ? styles.text : styles.textMin}>Precio: {price} $ ARG</Text>
+            <Text style={width > 400 ? styles.text : styles.textMin}>Precio: {price} $ USD</Text>
             <Text style={width > 400 ? styles.text : styles.textMin}>Stock: {stock}</Text>
         </View>
       </View>
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
         maxHeight:90,
         width:"15vw",
         height:"15vw",
-        backgroundColor:"red"
+        backgroundColor:"pink"
     },
     title:{
         color:colors.lightGray,
@@ -55,11 +55,11 @@ const styles = StyleSheet.create({
         padding:10
     },
     text:{
-       color:colors.lightGray,
+       color:colors.black,
        fontSize:16
     },
     textMin:{
-      color:colors.lightGray,
+      color:colors.black,
       fontSize:12
     }
 })

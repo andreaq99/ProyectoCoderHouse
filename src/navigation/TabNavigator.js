@@ -56,7 +56,7 @@ const TapNavigator = () => {
 
 const styles = StyleSheet.create({
     tabBar:{
-        backgroundColor:colors.primary,
+        backgroundColor:colors.gold,
         height:70
     }
 })

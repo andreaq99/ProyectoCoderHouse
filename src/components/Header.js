@@ -34,14 +34,14 @@ export default Header
 
 const styles = StyleSheet.create({
     container:{
-        backgroundColor:colors.primary,
+        backgroundColor:colors.gold,
         height:50,
         alignItems:"center",
         justifyContent:"center",
         position:"relative"
     },
     title:{
-        color:colors.lightGray,
+        color:colors.black,
         fontSize:16,
         fontFamily:"josefin"
     },

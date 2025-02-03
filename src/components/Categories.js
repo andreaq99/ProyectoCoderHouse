@@ -1,29 +1,29 @@
-import { StyleSheet,FlatList,View,Text} from 'react-native'
-import CardItemCategory from './CardItemCategory'
-import { useGetCategoriesQuery} from '../services/shop'
-
+import { StyleSheet, FlatList, View, Text } from 'react-native';
+import CardItemCategory from './CardItemCategory';
+import { useGetCategoriesQuery } from '../services/shop';
+import LoadingSpinner from './LoadingSpinner';
 
 const Categories = () => {
+  const { data: categories, isError, error, isLoading } = useGetCategoriesQuery();
 
-  const {data:categories,isError,error,isSuccess,isLoading} = useGetCategoriesQuery()
+  if (isError) return <View><Text>{error.message}</Text></View>;
 
-  if(isLoading) return <View><Text>cargando</Text></View>
-  if(isError) return <View><Text>{error.message}</Text></View>
-  
-  return (
+  return isLoading ? (
+    <LoadingSpinner />
+  ) : (
     <FlatList
-    data={categories}
-    keyExtractor={item => item}
-    renderItem={({item})=> <CardItemCategory item={item}/>}
-    contentContainerStyle={styles.containerCard}
-  />
-  )
-}
+      data={categories}
+      keyExtractor={item => item}
+      renderItem={({ item }) => <CardItemCategory item={item} />}
+      contentContainerStyle={styles.containerCard}
+    />
+  );
+};
 
-export default Categories
+export default Categories;
 
 const styles = StyleSheet.create({
-  containerCard:{
-    paddingBottom:60
+  containerCard: {
+    paddingBottom: 60
   }
-})
+});

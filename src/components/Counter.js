@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     gap:20,
   },
   button:{
-    backgroundColor:colors.accent,
+    backgroundColor:colors.gold,
     width:50,
     padding:10,
     borderRadius:5,
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     alignItems:"center"
   },
   textButton:{
-    color:colors.lightGray,
+    color:colors.black,
     fontSize:20
   },
 })
